@@ -1,6 +1,52 @@
-This notes for tutorial from the https://app.pluralsight.com/player?course=react-flux-building-applications&author=cory-house&name=react-flux-building-applications-m1&clip=0&mode=live  
- 
- 
+0. Very simple single component
+One simple component. 
+
+  0.1) ..\src\main.js
+
+      var React = require('react');
+      var Home = require('./components/homePage')
+
+      $ = jQuery = require('jquery');
+
+      React.render(<Home/>, document.getElementById('app'));
+
+  0.2) \src\index.html
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+        <title>Pluralsight Administration</title>
+        <link rel="stylesheet" href="css/bundle.css" />
+        </head>
+        <body>
+        <div id="app"></div>
+        <script src="scripts/bundle.js"></script>
+        </body>
+      </html>
+
+
+  0.3.  \src\components\homePage.js
+
+      "use strict";
+
+      var React = require('react');
+
+      var Home = React.createClass({
+        render: function() {
+          return (
+            <div className='jumbotron'>
+              <h1>HALOOO!</h1>
+            </div>
+          );
+        }
+      });
+
+      module.exports = Home;
+
+
+
+Next follow the notes for tutorial from the https://app.pluralsight.com/player?course=react-flux-building-applications&author=cory-house&name=react-flux-building-applications-m1&clip=0&mode=live  
+  
 1. NodeJS 
 2. Npm 
 3. React 0.13.3 
